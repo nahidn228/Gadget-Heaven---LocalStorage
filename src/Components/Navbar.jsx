@@ -107,7 +107,7 @@ const Navbar = () => {
               next level. From smart devices to the coolest accessories, we have
               it all!
             </p>
-            <button className="btn text-[#9538E2] text-lg">Shop Now</button>
+            <button className="btn text-[#9538E2] text-lg transition hover:scale-105">Shop Now</button>
           </div>
         </div>
       </div>
