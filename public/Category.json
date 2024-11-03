@@ -1,0 +1,42 @@
+[
+  {
+    "product_id": 1,
+    "category": "Audio"
+  },
+  {
+    "product_id": 2,
+    "category": "Wearables"
+  },
+  {
+    "product_id": 3,
+    "category": "Cameras"
+  },
+  {
+    "product_id": 4,
+    "category": "Laptop"
+  },
+  {
+    "product_id": 5,
+    "category": "Mobiles"
+  },
+  {
+    "product_id": 6,
+    "category": "Tablets"
+  },
+  {
+    "product_id": 7,
+    "category": "Accessories"
+  },
+  {
+    "product_id": 8,
+    "category": "Home Automation"
+  },
+  {
+    "product_id": 9,
+    "category": "Home Appliances"
+  },
+  {
+    "product_id": 10,
+    "category": "Projectors"
+  }
+]
