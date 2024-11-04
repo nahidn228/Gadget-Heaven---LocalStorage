@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
 import { IoIosStar } from "react-icons/io";
+import { PiHeartBold } from "react-icons/pi";
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import { addCart } from "../utility";
+import { addWishlist } from "../utility/wishlist";
 
 const GadgetDetails = () => {
   const allData = useLoaderData();
@@ -23,6 +26,17 @@ const GadgetDetails = () => {
     rating,
     brand,
   } = gadgets || {};
+
+  //Handle Cart btn
+  const handleCart = (gadgets) => {
+    // addCart(gadgets);
+    addCart(gadgets);
+  };
+  //Handle Wishlist btn
+  const handleWishlist = (gadgets) => {
+    // addCart(gadgets);
+    addWishlist(gadgets);
+  };
 
   return (
     <div>
@@ -69,7 +83,9 @@ const GadgetDetails = () => {
                     Specification
                   </span>
                   <br />
-                  {Specification}
+                  {Specification?.map((item, i) => (
+                    <li key={i}> {item} </li>
+                  ))}
                   {/* <li>{Specification[0]}</li>
                   <li>{Specification[1]}</li>
                   <li>{Specification[2]}</li> */}
@@ -87,9 +103,20 @@ const GadgetDetails = () => {
                     </span>
                   </span>
                 </p>
-                <Link className="btn bg-[#9538E2] rounded-full text-white px-8">
-                  Add To Card <FaCartPlus />
-                </Link>
+                <div className="flex items-center gap-4">
+                  <Link
+                    onClick={() => handleCart(gadgets)}
+                    className="btn bg-[#9538E2] rounded-full text-white px-8 "
+                  >
+                    Add To Card <FaCartPlus />
+                  </Link>
+                  <Link
+                    onClick={() => handleWishlist(gadgets)}
+                    className="btn bg-[#9538E2] rounded-full text-white text-xl"
+                  >
+                    <PiHeartBold />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
