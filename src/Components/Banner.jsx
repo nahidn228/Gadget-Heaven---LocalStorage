@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import bannerImg from "../assets/banner.png";
 
 const Banner = () => {
@@ -14,9 +15,12 @@ const Banner = () => {
             next level. From smart devices to the coolest accessories, we have
             it all!
           </p>
-          <button className="btn text-[#9538E2] text-lg transition hover:scale-105">
+          <Link
+            to="/gadgets"
+            className="btn text-[#9538E2] text-lg transition hover:scale-105"
+          >
             Shop Now
-          </button>
+          </Link>
         </div>
       </div>
 

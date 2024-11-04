@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 
 const Cards = ({ gadget }) => {
   const { product_title, product_image, price } = gadget || {};
@@ -16,9 +17,12 @@ const Cards = ({ gadget }) => {
         {/* <p> {description} </p> */}
         <p> Price : ${price} </p>
         <div className="card-actions ">
-          <button className="btn btn-sm py-2 px-8 text-[#9538E2] outline outline-[#9538E2] rounded-full">
+          <Link
+            to={`/gadgets/${gadget.product_id}`}
+            className="btn btn-sm py-2 px-8 text-[#9538E2] outline outline-[#9538E2] rounded-full"
+          >
             View Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import GadgetCards from "../components/GadgetCards";
+import GadgetDetails from "../components/GadgetDetails";
 import MainLayouts from "../layouts/MainLayouts";
 import Dashboard from "../pages/Dashboard";
 import Gadgets from "../pages/Gadgets";
@@ -36,9 +37,16 @@ const router = createBrowserRouter([
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
       },
+
       {
         path: "/gadgets",
+        loader: () => fetch("../gadget.json"),
         element: <Gadgets></Gadgets>,
+      },
+      {
+        path: "/gadgets/:id",
+        loader: () => fetch("../gadget.json"),
+        element: <GadgetDetails></GadgetDetails>,
       },
     ],
   },

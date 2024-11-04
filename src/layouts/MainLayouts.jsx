@@ -7,7 +7,7 @@ const MainLayouts = () => {
     <div>
       <Navbar></Navbar>
 
-      <div className="min-h-[calc(100vh-500px)] max-w-screen-xl  mx-auto">
+      <div className="min-h-100vh max-w-screen-xl  mx-auto">
         {/* Dynamic Section */}
         <Outlet></Outlet>
       </div>
