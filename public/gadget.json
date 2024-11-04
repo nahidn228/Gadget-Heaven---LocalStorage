@@ -146,6 +146,101 @@
     "availability": true,
     "rating": 4.2,
     "brand": "PenMaster"
+  },
+  {
+    "product_id": 13,
+    "product_title": "Wireless Charging Pad",
+    "product_image": "https://i.ibb.co.com/MBxJzPK/Wireless-Charging-Pad.jpg",
+    "category": "Accessories",
+    "price": 19.99,
+    "description": "Fast wireless charging for compatible devices.",
+    "Specification": ["15W fast charging", "Anti-slip", "LED indicator"],
+    "availability": true,
+    "rating": 3.9,
+    "brand": "ChargePro"
+  },
+  {
+    "product_id": 14,
+    "product_title": "Smartphone Case",
+    "product_image": "https://i.ibb.co.com/7bGsvdz/Smartphone-Case.jpg",
+    "category": "Accessories",
+    "price": 14.99,
+    "description": "Durable case to protect your smartphone.",
+    "Specification": ["Shockproof", "Multiple colors available"],
+    "availability": true,
+    "rating": 4.5,
+    "brand": "CaseGuard"
+  },
+  {
+    "product_id": 15,
+    "product_title": "Smart Thermostat",
+    "product_image": "https://i.ibb.co.com/p3xDdRQ/Smart-Thermostat.jpg",
+    "category": "Home Automation",
+    "price": 129.99,
+    "description": "Save energy with this programmable smart thermostat.",
+    "Specification": ["Wi-Fi control", "Energy saving", "App support"],
+    "availability": true,
+    "rating": 4.2,
+    "brand": "EcoHome"
+  },
+  {
+    "product_id": 16,
+    "product_title": "Smart Light Bulb",
+    "product_image": "https://i.ibb.co.com/hHGPmj9/Smart-Light-Bulb.jpg",
+    "category": "Home Automation",
+    "price": 24.99,
+    "description": "Control your lights remotely with smart technology.",
+    "Specification": ["RGB color changing", "App control", "Voice control"],
+    "availability": true,
+    "rating": 4.6,
+    "brand": "LightSmart"
+  },
+  {
+    "product_id": 17,
+    "product_title": "Robot Vacuum Cleaner",
+    "product_image": "https://i.ibb.co.com/L9VV6cr/Robot-Vacuum-Cleaner.jpg",
+    "category": "Home Appliances",
+    "price": 249.99,
+    "description": "Effortless cleaning with smart navigation and powerful suction.",
+    "Specification": ["Auto navigation", "Scheduled cleaning", "App control"],
+    "availability": true,
+    "rating": 4.1,
+    "brand": "CleanBot"
+  },
+  {
+    "product_id": 18,
+    "product_title": "Air Fryer",
+    "product_image": "https://i.ibb.co.com/SdsxdxR/Air-Fryer.jpg",
+    "category": "Home Appliances",
+    "price": 99.99,
+    "description": "Cook healthier meals with less oil.",
+    "Specification": ["3.5L capacity", "Adjustable temperature", "Timer"],
+    "availability": true,
+    "rating": 4.4,
+    "brand": "HealthyCook"
+  },
+  {
+    "product_id": 19,
+    "product_title": "Portable Projector",
+    "product_image": "https://i.ibb.co.com/dWbwrgz/Portable-Projector.jpg",
+    "category": "Projectors",
+    "price": 199.99,
+    "description": "Compact projector for home entertainment and presentations.",
+    "Specification": ["1080p resolution", "HDMI input", "Built-in speaker"],
+    "availability": true,
+    "rating": 4.3,
+    "brand": "ProjectorPro"
+  },
+  {
+    "product_id": 20,
+    "product_title": "Mini Projector",
+    "product_image": "https://i.ibb.co.com/vkf7hwp/Mini-Projector.jpg",
+    "category": "Projectors",
+    "price": 79.99,
+    "description": "Small projector for on-the-go entertainment.",
+    "Specification": ["480p resolution", "Portable", "Battery-powered"],
+    "availability": true,
+    "rating": 4.0,
+    "brand": "PocketProjector"
   }
-  
 ]
