@@ -4,13 +4,13 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="border-2 bg-white/30 backdrop-blur-xl mt-2 rounded-xl text-white ">
-      <div className="m-2 bg-[#9538E2] rounded-xl">
-        <div className="navbar    ">
+    <div className="border-t-2 border-x-2 bg-white/30 backdrop-blur-xl mt-2 rounded-t-xl text-white max-w-screen-xl  mx-auto">
+      <div className="mx-2 mt-2 bg-[#9538E2] rounded-t-xl">
+        <div className="navbar  ">
           <div className="navbar-start">
             <div className="dropdown">
               <div
-                tabindex="0"
+                tabIndex="0"
                 role="button"
                 className="btn btn-ghost lg:hidden"
               >
@@ -22,18 +22,18 @@ const Navbar = () => {
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M4 6h16M4 12h8m-8 6h16"
                   />
                 </svg>
               </div>
               <ul
-                tabindex="0"
+                tabIndex="0"
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
-                <NavLink className="btn bg-[#9538E2]" to="/">
+                <NavLink  className="btn bg-[#9538E2]" to="/">
                   Home
                 </NavLink>
                 <NavLink className="btn bg-[#9538E2]" to="/statistics">
@@ -42,8 +42,8 @@ const Navbar = () => {
                 <NavLink className="btn bg-[#9538E2]" to="/dashboard">
                   Dashboard
                 </NavLink>
-                <NavLink className="btn bg-[#9538E2]" to="/support">
-                  Support
+                <NavLink className="btn bg-[#9538E2]" to="/gadgets">
+                Gadgets
                 </NavLink>
               </ul>
             </div>
@@ -73,9 +73,9 @@ const Navbar = () => {
               </NavLink>
               <NavLink
                 className="btn  border-none text-white bg-[#9538E2] hover:text-black"
-                to="/support"
+                to="/gadgets"
               >
-                Support
+                Gadgets
               </NavLink>
             </ul>
           </div>
@@ -96,20 +96,7 @@ const Navbar = () => {
         </div>
 
         {/* Nav text */}
-        <div className="  lg:pb-40">
-          <div className="flex flex-col items-center text-center w-full md:w-2/3 mx-auto space-y-6 py-12">
-            <h1 className="text-5xl">
-              Upgrade Your Tech Accessorize with Gadget Heaven Accessories
-            </h1>
-
-            <p className="text-lg">
-              Explore the latest gadgets that will take your experience to the
-              next level. From smart devices to the coolest accessories, we have
-              it all!
-            </p>
-            <button className="btn text-[#9538E2] text-lg transition hover:scale-105">Shop Now</button>
-          </div>
-        </div>
+        
       </div>
     </div>
   );
