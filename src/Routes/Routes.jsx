@@ -45,10 +45,11 @@ const router = createBrowserRouter([
             element: <Cart></Cart>,
           },
           {
-            path: "/dashboard/:id",
+            path: "/dashboard/:cart",
             loader: () => fetch("../gadget.json"),
             element: <Cart></Cart>,
           },
+         
         ],
       },
 

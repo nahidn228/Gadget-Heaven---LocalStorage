@@ -1,11 +1,19 @@
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const { pathname } = useLocation();
+
   return (
-    <div className="border-t-2 border-x-2 bg-white/30 backdrop-blur-xl mt-2 rounded-t-xl text-white max-w-screen-xl  mx-auto">
-      <div className="mx-2 mt-2 bg-[#9538E2] rounded-t-xl">
+    <div className="border-t-2 border-x-2 bg-white/30 backdrop-blur-xl mt-2 rounded-t-xl  max-w-screen-xl  mx-auto">
+      <div
+        className={`mx-2 mt-2  rounded-t-xl ${
+          pathname == "/"
+            ? "text-white bg-[#9538E2]"
+            : "text-black bg-slate-100"
+        } `}
+      >
         <div className="navbar  ">
           <div className="navbar-start">
             <div className="dropdown">
@@ -33,7 +41,7 @@ const Navbar = () => {
                 tabIndex="0"
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
-                <NavLink  className="btn bg-[#9538E2]" to="/">
+                <NavLink className="btn bg-[#9538E2]" to="/">
                   Home
                 </NavLink>
                 <NavLink className="btn bg-[#9538E2]" to="/statistics">
@@ -43,7 +51,7 @@ const Navbar = () => {
                   Dashboard
                 </NavLink>
                 <NavLink className="btn bg-[#9538E2]" to="/gadgets">
-                Gadgets
+                  Gadgets
                 </NavLink>
               </ul>
             </div>
@@ -96,7 +104,6 @@ const Navbar = () => {
         </div>
 
         {/* Nav text */}
-        
       </div>
     </div>
   );

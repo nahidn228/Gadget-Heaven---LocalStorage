@@ -1,5 +1,23 @@
+import { useEffect, useState } from "react";
 import { GiSettingsKnobs } from "react-icons/gi";
+import { useParams } from "react-router-dom";
+import { getAllCart, removeCart } from "../utility";
+import Cards from "./Cards";
 const Cart = () => {
+  const { id } = useParams();
+  console.log(id);
+  const [carts, setAllCarts] = useState([]);
+  useEffect(() => {
+    const carts = getAllCart();
+    setAllCarts(carts);
+  }, []);
+
+  const handleRemove = (id) => {
+    removeCart(id);
+    const carts = getAllCart();
+    setAllCarts(carts);
+  };
+
   return (
     <div>
       {/* Header text and Button */}
@@ -19,6 +37,11 @@ const Cart = () => {
             Purchase
           </button>
         </div>
+      </div>
+      <div className=" md:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8 max-w-screen-xl  mx-auto px-12">
+        {carts.map((gadget) => (
+          <Cards handleRemove={handleRemove} key={gadget.product_id} gadget={gadget}></Cards>
+        ))}
       </div>
     </div>
   );

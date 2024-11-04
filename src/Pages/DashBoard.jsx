@@ -1,7 +1,11 @@
-import { NavLink, Outlet, useLoaderData } from "react-router-dom";
+import { NavLink, Outlet, useLoaderData, useLocation } from "react-router-dom";
 const Dashboard = () => {
   const data = useLoaderData();
-   console.log(data);
+  //console.log(data);
+
+  const location = useLocation();
+  //console.log(location)
+
   return (
     <div className=" max-w-screen-xl  mx-auto">
       <div className="border-x-2 border-b-2 rounded-b-xl">
@@ -16,13 +20,13 @@ const Dashboard = () => {
             </p>
             <div className="space-x-10">
               <NavLink
-                to="/gadgets"
+                to={`/cart/${data.id}`}
                 className="btn px-8 rounded-full text-[#9538E2] text-base transition hover:scale-105"
               >
                 Cart
               </NavLink>
               <NavLink
-                to="/gadgets"
+                to="/wishlist"
                 className="btn px-8 rounded-full text-[#9538E2] text-base transition hover:scale-105"
               >
                 Wishlist

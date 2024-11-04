@@ -4,16 +4,24 @@ import { IoIosStar } from "react-icons/io";
 import { PiHeartBold } from "react-icons/pi";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { addCart } from "../utility";
-import { addWishlist } from "../utility/wishlist";
+import { addWishlist, getAllWish } from "../utility/wishlist";
 
 const GadgetDetails = () => {
   const allData = useLoaderData();
   const { id } = useParams();
   const [gadgets, setGadgets] = useState([]);
+  const [isWish, setIsWish] = useState(false);
   useEffect(() => {
     const singleData = allData.find((item) => item.product_id == id);
     setGadgets(singleData);
-  }, [allData, id]);
+    const wishlist = getAllWish();
+    const isExist = wishlist.find(
+      (item) => item.product_id === gadgets.product_id
+    );
+    if (isExist) {
+      setIsWish(true);
+    }
+  }, [allData, id, gadgets.product_id]);
 
   const {
     product_title,
@@ -36,6 +44,7 @@ const GadgetDetails = () => {
   const handleWishlist = (gadgets) => {
     // addCart(gadgets);
     addWishlist(gadgets);
+    setIsWish(true);
   };
 
   return (
@@ -111,6 +120,7 @@ const GadgetDetails = () => {
                     Add To Card <FaCartPlus />
                   </Link>
                   <Link
+                    disabled={isWish}
                     onClick={() => handleWishlist(gadgets)}
                     className="btn bg-[#9538E2] rounded-full text-white text-xl"
                   >

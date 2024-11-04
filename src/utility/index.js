@@ -25,7 +25,7 @@ const addCart = (gadgets) => {
 
   const isExist = carts.find((item) => item.product_id === gadgets.product_id);
   if (isExist) {
-    return toast.warning("This gadgets is already exist");
+    return toast.error("This gadgets is already exist");
   }
 
   carts.push(gadgets);
@@ -34,5 +34,12 @@ const addCart = (gadgets) => {
 };
 
 // remove selected gadgets from local storage
+const removeCart = (id) =>{
+  const carts = getAllCart();
+  const remainingCart = carts.filter(item => item.product_id != id)
+  localStorage.setItem("cart", JSON.stringify(remainingCart));
+  toast.warning("Successfully Deleted");
 
-export { addCart, getAllCart };
+}
+
+export { addCart, getAllCart, removeCart };
