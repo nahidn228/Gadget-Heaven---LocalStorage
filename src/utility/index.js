@@ -43,9 +43,11 @@ const removeCart = (id) => {
 
 const removeAllCart = () => {
   const cart = [];
+
   localStorage.clear();
   localStorage.setItem("cart", JSON.stringify(cart));
   toast.success("Successfully Purchase ");
+  
 };
 
 export { addCart, getAllCart, removeAllCart, removeCart };

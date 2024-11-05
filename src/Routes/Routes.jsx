@@ -5,6 +5,7 @@ import GadgetDetails from "../components/GadgetDetails";
 import Wishlist from "../components/Wishlist";
 import MainLayouts from "../layouts/MainLayouts";
 import Dashboard from "../pages/Dashboard";
+import ErrorPage from "../pages/ErrorPage";
 import Gadgets from "../pages/Gadgets";
 import Home from "../pages/Home";
 import Statistics from "../pages/Statistics";
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayouts></MainLayouts>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",

@@ -10,7 +10,7 @@ const Statistics = () => {
 
       <div className="flex justify-center">
         <BarChart width={1000} height={400} data={data}>
-          <XAxis dataKey="product_title" />
+          <XAxis dataKey="category" />
           <YAxis dataKey="price" />
           <Bar dataKey="price" barSize={30} fill="#9538E2" />
         </BarChart>

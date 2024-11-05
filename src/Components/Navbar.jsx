@@ -10,12 +10,14 @@ const Navbar = () => {
   const wishlist = getAllWish();
 
   return (
-    <div className="border-t-2 border-x-2 bg-white/30 backdrop-blur-xl mt-2 rounded-t-xl  max-w-screen-xl  mx-auto">
+    <div
+      className={` ${
+        pathname == "/" ? "border-t-2 border-x-2" : ""
+      }  mt-2 rounded-t-xl max-w-screen-xl  mx-auto`}
+    >
       <div
         className={`mx-2 mt-2  rounded-t-xl ${
-          pathname == "/"
-            ? "text-white bg-[#9538E2]"
-            : "text-black bg-slate-100"
+          pathname == "/" ? "text-white bg-[#9538E2]" : "text-black "
         } `}
       >
         <div className="navbar  ">

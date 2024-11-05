@@ -7,7 +7,6 @@ const Cart = () => {
   const [carts, setAllCarts] = useState([]);
   const [prices, setAllPrices] = useState(0);
 
-
   useEffect(() => {
     const carts = getAllCart();
     setAllCarts(carts);
@@ -53,7 +52,7 @@ const Cart = () => {
           <h4 className="text-2xl font-bold">Cart</h4>
         </div>
         <div className="flex items-center gap-4 ">
-          <h4 className="text-xl font-bold">Total cost: {prices}</h4>
+          <h4 className="text-xl font-bold">Total cost: {prices.toFixed(2)}</h4>
           <button
             onClick={handleSort}
             className="btn rounded-full outline outline-[#9538E2] text-[#9538E2] text-base btn-md "
@@ -64,7 +63,7 @@ const Cart = () => {
             </span>
           </button>
           <button
-            onClick={removeAllCart}
+            onClick={() => removeAllCart(22)}
             className="btn rounded-full outline outline-[#9538E2] text-[#9538E2] text-base btn-md "
           >
             Purchase
