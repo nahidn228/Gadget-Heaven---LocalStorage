@@ -27,6 +27,7 @@ const Cards = ({ gadget, handleRemove }) => {
             </Link>
           ) : (
             <Link
+              
               to={`/gadgets/${gadget.product_id}`}
               className="btn btn-sm py-2 px-8 text-[#9538E2] outline outline-[#9538E2] rounded-full"
             >

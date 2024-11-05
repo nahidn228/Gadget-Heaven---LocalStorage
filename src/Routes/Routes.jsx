@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
+import Cart from "../components/Cart";
 import GadgetCards from "../components/GadgetCards";
 import GadgetDetails from "../components/GadgetDetails";
+import Wishlist from "../components/Wishlist";
 import MainLayouts from "../layouts/MainLayouts";
 import Dashboard from "../pages/Dashboard";
 import Gadgets from "../pages/Gadgets";
 import Home from "../pages/Home";
 import Statistics from "../pages/Statistics";
-import Cart from "../components/Cart";
-import Wishlist from "../components/Wishlist";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/statistics",
+        loader: () => fetch("../gadget.json"),
         element: <Statistics></Statistics>,
       },
       {
@@ -55,7 +56,6 @@ const router = createBrowserRouter([
             loader: () => fetch("../gadget.json"),
             element: <Wishlist></Wishlist>,
           },
-         
         ],
       },
 

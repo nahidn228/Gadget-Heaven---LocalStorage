@@ -3,7 +3,7 @@ import { NavLink, Outlet, useLoaderData, useLocation } from "react-router-dom";
 // import 'react-tabs/style/react-tabs.css';
 const Dashboard = () => {
   const data = useLoaderData();
-  //console.log(data);
+  console.log(data);
 
   const location = useLocation();
   console.log(location);

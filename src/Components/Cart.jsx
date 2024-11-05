@@ -1,19 +1,37 @@
 import { useEffect, useState } from "react";
 import { GiSettingsKnobs } from "react-icons/gi";
-import { getAllCart, removeCart } from "../utility";
+
+import { getAllCart, removeAllCart, removeCart } from "../utility";
 import Cards from "./Cards";
 const Cart = () => {
   const [carts, setAllCarts] = useState([]);
   const [prices, setAllPrices] = useState(0);
 
+
   useEffect(() => {
     const carts = getAllCart();
     setAllCarts(carts);
+    const singlePrice = carts.map((item) => item.price);
+    //console.log(singlePrice);
+
+    const totalPrice = singlePrice.reduce((a, b) => a + b, 0);
+    setAllPrices(totalPrice);
+
+    // const storedData = localStorage.getItem("cart");
+    // if (storedData) {
+    //   setAllData(JSON.parse(storedData));
+    // }
   }, []);
 
-  const addPrice = (pr) => {
-    setAllPrices(prices + pr);
-  };
+  // const removeAllCart = () => {
+  //   localStorage.clear();
+  //   setAllData([]);
+  //   toast.success("Successfully Purchase ");
+  // };
+
+  // const addPrice = (pr) => {
+  //   setAllPrices(prices + pr);
+  // };
 
   const handleSort = () => {
     const sortByPrice = [...carts].sort((a, b) => b.price - a.price);
@@ -35,7 +53,7 @@ const Cart = () => {
           <h4 className="text-2xl font-bold">Cart</h4>
         </div>
         <div className="flex items-center gap-4 ">
-          <h4 className="text-xl font-bold">Total cost:{prices}</h4>
+          <h4 className="text-xl font-bold">Total cost: {prices}</h4>
           <button
             onClick={handleSort}
             className="btn rounded-full outline outline-[#9538E2] text-[#9538E2] text-base btn-md "
@@ -45,7 +63,10 @@ const Cart = () => {
               <GiSettingsKnobs />
             </span>
           </button>
-          <button className="btn rounded-full outline outline-[#9538E2] text-[#9538E2] text-base btn-md ">
+          <button
+            onClick={removeAllCart}
+            className="btn rounded-full outline outline-[#9538E2] text-[#9538E2] text-base btn-md "
+          >
             Purchase
           </button>
         </div>

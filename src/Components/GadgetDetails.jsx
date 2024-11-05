@@ -11,9 +11,11 @@ const GadgetDetails = () => {
   const { id } = useParams();
   const [gadgets, setGadgets] = useState([]);
   const [isWish, setIsWish] = useState(false);
+
   useEffect(() => {
     const singleData = allData.find((item) => item.product_id == id);
     setGadgets(singleData);
+
     const wishlist = getAllWish();
     const isExist = wishlist.find(
       (item) => item.product_id === gadgets.product_id
@@ -37,12 +39,10 @@ const GadgetDetails = () => {
 
   //Handle Cart btn
   const handleCart = (gadgets) => {
-    // addCart(gadgets);
     addCart(gadgets);
   };
   //Handle Wishlist btn
   const handleWishlist = (gadgets) => {
-    // addCart(gadgets);
     addWishlist(gadgets);
     setIsWish(true);
   };
@@ -137,3 +137,4 @@ const GadgetDetails = () => {
 };
 
 export default GadgetDetails;
+
