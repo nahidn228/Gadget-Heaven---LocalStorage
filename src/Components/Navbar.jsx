@@ -1,9 +1,13 @@
 import { BsCart3 } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { getAllCart } from "../utility";
+import { getAllWish } from "../utility/wishlist";
 
 const Navbar = () => {
   const { pathname } = useLocation();
+  const carts = getAllCart();
+  const wishlist = getAllWish();
 
   return (
     <div className="border-t-2 border-x-2 bg-white/30 backdrop-blur-xl mt-2 rounded-t-xl  max-w-screen-xl  mx-auto">
@@ -88,16 +92,27 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end space-x-4">
-            <NavLink className="btn btn-ghost btn-circle text-xl">
+            <NavLink
+              to="/dashboard/cart"
+              className="btn btn-ghost btn-circle text-xl"
+            >
               <div className="indicator">
                 <BsCart3 />
-                <span className="badge badge-xs badge-primary indicator-item"></span>
+                <span className="badge badge-xs badge-primary indicator-item">
+                  {" "}
+                  {carts.length}{" "}
+                </span>
               </div>
             </NavLink>
-            <NavLink className="btn btn-ghost btn-circle text-xl">
+            <NavLink
+              to="/dashboard/wishlist"
+              className="btn btn-ghost btn-circle text-xl"
+            >
               <div className="indicator">
                 <FaRegHeart />
-                <span className="badge badge-xs badge-primary indicator-item"></span>
+                <span className="badge badge-xs badge-primary indicator-item">
+                  {wishlist.length}
+                </span>
               </div>
             </NavLink>
           </div>

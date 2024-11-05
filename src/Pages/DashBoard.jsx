@@ -1,10 +1,12 @@
 import { NavLink, Outlet, useLoaderData, useLocation } from "react-router-dom";
+// import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+// import 'react-tabs/style/react-tabs.css';
 const Dashboard = () => {
   const data = useLoaderData();
   //console.log(data);
 
   const location = useLocation();
-  //console.log(location)
+  console.log(location);
 
   return (
     <div className=" max-w-screen-xl  mx-auto">
@@ -20,21 +22,42 @@ const Dashboard = () => {
             </p>
             <div className="space-x-10">
               <NavLink
-                to={`/cart/${data.id}`}
+                to="/dashboard/cart"
                 className="btn px-8 rounded-full text-[#9538E2] text-base transition hover:scale-105"
               >
                 Cart
               </NavLink>
               <NavLink
-                to="/wishlist"
+                to="/dashboard/wishlist"
                 className="btn px-8 rounded-full text-[#9538E2] text-base transition hover:scale-105"
               >
                 Wishlist
               </NavLink>
+              {/* <Tabs>
+    <TabList>
+      <Tab>Title 1</Tab>
+      <Tab>Title 2</Tab>
+    </TabList>
+    </Tabs> */}
             </div>
           </div>
         </div>
       </div>
+
+      {/* <Tabs>
+    <TabList>
+      <Tab>Title 1</Tab>
+      <Tab>Title 2</Tab>
+    </TabList>
+
+    <TabPanel>
+      <h2>Any content 1</h2>
+    </TabPanel>
+    <TabPanel>
+      <h2>Any content 2</h2>
+    </TabPanel>
+  </Tabs> */}
+
       <Outlet></Outlet>
     </div>
   );
