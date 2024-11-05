@@ -30,7 +30,7 @@ const addWishlist = (gadgets) => {
 
   wishlist.push(gadgets);
   localStorage.setItem("wishlist", JSON.stringify(wishlist));
-  toast.success("Successfully added");
+  toast.success("Successfully added to the wishlist");
 };
 
 // remove selected gadgets from local storage

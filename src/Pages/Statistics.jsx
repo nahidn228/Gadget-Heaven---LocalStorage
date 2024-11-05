@@ -1,11 +1,18 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import { Bar, BarChart, XAxis, YAxis } from "recharts";
+
 const Statistics = () => {
   const data = useLoaderData();
   //   const data = [{ name: "Page A", uv: 400, pv: 2400, amt: 2400 }];
 
   return (
     <div className="my-12 ">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Statistics - Gadget Heaven Accessories</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <h2 className="text-3xl font-bold mb-10">Statistics</h2>
 
       <div className="flex justify-center">

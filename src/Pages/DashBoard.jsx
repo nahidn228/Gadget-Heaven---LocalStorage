@@ -1,6 +1,8 @@
 import { NavLink, Outlet, useLoaderData, useLocation } from "react-router-dom";
-// import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-// import 'react-tabs/style/react-tabs.css';
+import { Helmet } from "react-helmet";
+
+
+
 const Dashboard = () => {
   const data = useLoaderData();
   console.log(data);
@@ -9,7 +11,13 @@ const Dashboard = () => {
   console.log(location);
 
   return (
+    
     <div className=" max-w-screen-xl  mx-auto">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Dashboard - Gadget Heaven Accessories</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className="border-x-2 border-b-2 rounded-b-xl">
         <div className=" bg-[#9538E2] py-12 mx-2 mb-2  rounded-b-xl text-white">
           <div className="flex flex-col items-center text-center w-full md:w-2/3 mx-auto space-y-6 ">

@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { GiSettingsKnobs } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
+import modalImg from "../assets/Group.png";
 
+import { Link } from "react-router-dom";
 import { getAllCart, removeAllCart, removeCart } from "../utility";
 import Cards from "./Cards";
 const Cart = () => {
   const [carts, setAllCarts] = useState([]);
   const [prices, setAllPrices] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const carts = getAllCart();
@@ -62,12 +66,14 @@ const Cart = () => {
               <GiSettingsKnobs />
             </span>
           </button>
-          <button
-            onClick={() => removeAllCart(22)}
-            className="btn rounded-full outline outline-[#9538E2] text-[#9538E2] text-base btn-md "
+          <Link
+            onClick={() => removeAllCart()}
+            className={` ${
+              prices == 0 ? "btn-disabled" : ""
+            } btn rounded-full outline outline-[#9538E2] bg-[#9538E2] text-white text-base btn-md`}
           >
             Purchase
-          </button>
+          </Link>
         </div>
       </div>
       <div className=" md:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-8 max-w-screen-xl  mx-auto px-12">
@@ -79,6 +85,28 @@ const Cart = () => {
           ></Cards>
         ))}
       </div>
+
+      {/* Open the modal using document.getElementById('ID').showModal() method */}
+
+      <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+        <div className="modal-box flex flex-col justify-center items-center">
+          <img src={modalImg} alt="" />
+          <h3 className="font-bold text-2xl py-4">Payment Successfully !</h3>
+          <p className="text-gray-500 font-semibold">Thanks For Purchasing</p>
+          <p className="text-gray-500 font-semibold">
+            Total : {prices.toFixed(2)}
+          </p>
+
+          <div className="modal-action ">
+            <form method="dialog ">
+              {/* if there is a button in form, it will close the modal */}
+              <button onClick={() => navigate("/")} className="btn w-full">
+                Close
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </div>
   );
 };

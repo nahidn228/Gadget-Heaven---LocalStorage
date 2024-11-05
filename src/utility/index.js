@@ -30,7 +30,7 @@ const addCart = (gadgets) => {
 
   carts.push(gadgets);
   localStorage.setItem("cart", JSON.stringify(carts));
-  toast.success("Successfully added");
+  toast.success("Successfully add to Cart");
 };
 
 // remove selected gadgets from local storage
@@ -38,16 +38,15 @@ const removeCart = (id) => {
   const carts = getAllCart();
   const remainingCart = carts.filter((item) => item.product_id != id);
   localStorage.setItem("cart", JSON.stringify(remainingCart));
-  toast.warning("Successfully Deleted");
+  toast.warning("Successfully Deleted ");
 };
 
 const removeAllCart = () => {
   const cart = [];
-
   localStorage.clear();
   localStorage.setItem("cart", JSON.stringify(cart));
-  toast.success("Successfully Purchase ");
-  
+  // toast.success("Successfully Purchase ");
+  document.getElementById("my_modal_5").showModal();
 };
 
 export { addCart, getAllCart, removeAllCart, removeCart };
