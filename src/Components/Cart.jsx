@@ -24,7 +24,7 @@ const Cart = () => {
     // if (storedData) {
     //   setAllData(JSON.parse(storedData));
     // }
-  }, []);
+  });
 
   // const removeAllCart = () => {
   //   localStorage.clear();
@@ -98,11 +98,15 @@ const Cart = () => {
           </p>
 
           <div className="modal-action ">
+            <button onClick={() => navigate("/")} className="btn w-full">
+              Close
+            </button>
+
             <form method="dialog ">
               {/* if there is a button in form, it will close the modal */}
-              <button onClick={() => navigate("/")} className="btn w-full">
+              {/* <button onClick={() => navigate("/")} className="btn w-full">
                 Close
-              </button>
+              </button> */}
             </form>
           </div>
         </div>
