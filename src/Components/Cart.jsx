@@ -24,7 +24,11 @@ const Cart = () => {
     // if (storedData) {
     //   setAllData(JSON.parse(storedData));
     // }
-  });
+  }, []);
+
+  // Delete useEffect dependency ([]) for instant update UI
+  // useEffect(() => {
+  // }, [])
 
   // const removeAllCart = () => {
   //   localStorage.clear();
@@ -42,8 +46,9 @@ const Cart = () => {
     // setAllPrices(sortByPrice);
   };
 
-  const handleRemove = (id) => {
+  const handleRemove = (id, price) => {
     removeCart(id);
+    setAllPrices(prices - price);
     const carts = getAllCart();
     setAllCarts(carts);
   };

@@ -5,7 +5,10 @@ const Cards = ({ gadget, handleRemove }) => {
   const { pathname } = useLocation();
   const { product_title, product_image, price } = gadget || {};
   return (
+
+    <>
     <div className="card bg-base-100 transition hover:scale-105 max-h-fit shadow-xl ">
+    
       <figure>
         <img
           className="h-56 w-full object-cover"
@@ -20,7 +23,7 @@ const Cards = ({ gadget, handleRemove }) => {
         <div className="card-actions ">
           {pathname === "/dashboard" || pathname === "/dashboard/cart" ? (
             <Link
-              onClick={() => handleRemove(gadget.product_id)}
+              onClick={() => handleRemove(gadget.product_id, price)}
               className="btn btn-sm py-2 px-8  outline outline-[#9538E2] rounded-full btn-warning"
             >
               Delete
@@ -36,6 +39,7 @@ const Cards = ({ gadget, handleRemove }) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
