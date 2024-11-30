@@ -9,6 +9,59 @@ const Navbar = () => {
   const carts = getAllCart();
   const wishlist = getAllWish();
 
+  const navLinks = (
+    <>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          `btn border-none hover:text-black ${
+            isActive
+              ? "bg-white text-[#9538E2] border-2 border-[#9538E2]"
+              : "bg-[#9538E2] text-white"
+          }`
+        }
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/statistics"
+        className={({ isActive }) =>
+          `btn border-none hover:text-black ${
+            isActive
+              ? "bg-white text-[#9538E2] border-2 border-[#9538E2]"
+              : "bg-[#9538E2] text-white"
+          }`
+        }
+      >
+        Statistics
+      </NavLink>
+      <NavLink
+        to="/dashboard"
+        className={({ isActive }) =>
+          `btn border-none hover:text-black ${
+            isActive
+              ? "bg-white text-[#9538E2] border-2 border-[#9538E2]"
+              : "bg-[#9538E2] text-white"
+          }`
+        }
+      >
+        Dashboard
+      </NavLink>
+      <NavLink
+        to="/gadgets"
+        className={({ isActive }) =>
+          `btn border-none hover:text-black ${
+            isActive
+              ? "bg-white text-[#9538E2] border-2 border-[#9538E2]"
+              : "bg-[#9538E2] text-white"
+          }`
+        }
+      >
+        Gadgets
+      </NavLink>
+    </>
+  );
+
   return (
     <div
       className={` ${
@@ -47,18 +100,7 @@ const Navbar = () => {
                 tabIndex="0"
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
-                <NavLink className="btn bg-[#9538E2]" to="/">
-                  Home
-                </NavLink>
-                <NavLink className="btn bg-[#9538E2]" to="/statistics">
-                  Statistics
-                </NavLink>
-                <NavLink className="btn bg-[#9538E2]" to="/dashboard">
-                  Dashboard
-                </NavLink>
-                <NavLink className="btn bg-[#9538E2]" to="/gadgets">
-                  Gadgets
-                </NavLink>
+                {navLinks}
               </ul>
             </div>
             <Link className="btn btn-ghost text-xl text-white hover:text-black bg-[#9538E2]">
