@@ -1,29 +1,21 @@
 
-## GadgetHeaven ✨
+# GadgetHeaven ✨
 
-### Live Website
-[GadgetHeaven Live](https://gadget-bd.surge.sh/)
+### Live Website [GadgetHeaven Live](https://gadget-bd.surge.sh/)
 
-### Requirement Document
-[Requirement Document Link](https://github.com/ProgrammingHero1/B10-A8-gadget-heaven)
+### Requirement Document [Requirement Document Link](https://github.com/ProgrammingHero1/B10-A8-gadget-heaven)
 
-### Project Overview
+## Project Overview
 GadgetHeaven is a responsive e-commerce platform for discovering, browsing, and purchasing the latest gadgets. The site is designed with a focus on seamless navigation, efficient data handling, and an engaging UI. The application includes a well-structured navigation bar, dynamic product categories, individual product detail pages, and essential functionalities like a shopping cart, wishlist, and product filtering.
 
-### Features
-#### Navigation: 
-Structured navbar with routes for Home, Dashboard, and Stats.
-#### Home Page:
-Displays a banner, category sidebar, and gadget cards with at least 10 unique products. Each category features different items.
-#### Details Page: 
-Product-specific information, add-to-cart and wishlist buttons with custom icons.
-#### Dashboard Page: 
-Two tabs for managing Cart and Wishlist items.
-Cart and Wishlist Management: Toast notifications for adding items to each.
-#### Sorting and Filtering: 
-Sort cart items by price and filter products by category.
-#### Dynamic Titles and Favicon: 
-Unique page titles and site icon for brand consistency.
+## Features
+#### Navigation: Structured navbar with routes for Home, Dashboard, and Stats.
+#### Home Page:Displays a banner, category sidebar, and gadget cards with at least 10 unique products. Each category features different items.
+#### Details Page: Product-specific information, add-to-cart and wishlist buttons with custom icons.
+#### Dashboard Page: Two tabs for managing Cart and Wishlist items.
+#### Cart and Wishlist Management: Toast notifications for adding items to each.
+#### Sorting and Filtering: Sort cart items by price and filter products by category.
+#### Dynamic Titles and Favicon: Unique page titles and site icon for brand consistency.
 
 ### Tech Stack
 React for component-based UI.
