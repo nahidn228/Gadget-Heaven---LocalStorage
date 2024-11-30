@@ -13,7 +13,7 @@ const Categories = ({ categories }) => {
         >
           All Products
         </NavLink>
-        {categories.map((category) => (
+        {categories?.map((category) => (
           <NavLink
             key={category.category}
             to={`/category/${category.category}`}

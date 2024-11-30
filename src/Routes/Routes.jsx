@@ -19,43 +19,43 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("../category.json"),
+        loader: () => fetch("./Category.json"),
         children: [
           {
             path: "/",
-            loader: () => fetch("../gadget.json"),
+            loader: () => fetch("/gadget.json"),
             element: <GadgetCards></GadgetCards>,
           },
           {
             path: "/category/:category",
-            loader: () => fetch("../gadget.json"),
+            loader: () => fetch("/gadget.json"),
             element: <GadgetCards></GadgetCards>,
           },
         ],
       },
       {
         path: "/statistics",
-        loader: () => fetch("../gadget.json"),
+        loader: () => fetch("/gadget.json"),
         element: <Statistics></Statistics>,
       },
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
-        loader: () => fetch("../gadget.json"),
+        loader: () => fetch("/gadget.json"),
         children: [
           {
             path: "/dashboard",
-            loader: () => fetch("../gadget.json"),
+            loader: () => fetch("/gadget.json"),
             element: <Cart></Cart>,
           },
           {
             path: "/dashboard/cart",
-            loader: () => fetch("../gadget.json"),
+            loader: () => fetch("/gadget.json"),
             element: <Cart></Cart>,
           },
           {
             path: "/dashboard/wishlist",
-            loader: () => fetch("../gadget.json"),
+            loader: () => fetch("/gadget.json"),
             element: <Wishlist></Wishlist>,
           },
         ],
@@ -63,12 +63,12 @@ const router = createBrowserRouter([
 
       {
         path: "/gadgets",
-        loader: () => fetch("../gadget.json"),
+        loader: () => fetch("/gadget.json"),
         element: <Gadgets></Gadgets>,
       },
       {
         path: "/gadgets/:id",
-        loader: () => fetch("../gadget.json"),
+        loader: () => fetch("/gadget.json"),
         element: <GadgetDetails></GadgetDetails>,
       },
     ],

@@ -1,11 +1,19 @@
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/NavBar";
 
 const MainLayouts = () => {
+  useEffect(() => {
+    // ..
+    AOS.init();
+  }, []);
+
   return (
-    <div>
+    <div >
       <Helmet>
         <meta charSet="utf-8" />
         <title>Home - Gadget Heaven Accessories</title>
