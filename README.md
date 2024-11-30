@@ -9,15 +9,22 @@
 GadgetHeaven is a responsive e-commerce platform for discovering, browsing, and purchasing the latest gadgets. The site is designed with a focus on seamless navigation, efficient data handling, and an engaging UI. The application includes a well-structured navigation bar, dynamic product categories, individual product detail pages, and essential functionalities like a shopping cart, wishlist, and product filtering.
 
 ## Features
-#### Navigation: Structured navbar with routes for Home, Dashboard, and Stats.
-#### Home Page:Displays a banner, category sidebar, and gadget cards with at least 10 unique products. Each category features different items.
-#### Details Page: Product-specific information, add-to-cart and wishlist buttons with custom icons.
-#### Dashboard Page: Two tabs for managing Cart and Wishlist items.
-#### Cart and Wishlist Management: Toast notifications for adding items to each.
-#### Sorting and Filtering: Sort cart items by price and filter products by category.
-#### Dynamic Titles and Favicon: Unique page titles and site icon for brand consistency.
+#### Navigation: 
+Structured navbar with routes for Home, Dashboard, and Stats.
+#### Home Page:  
+Displays a banner, category sidebar, and gadget cards with at least 10 unique products. Each category features different items.
+#### Details Page: 
+Product-specific information, add-to-cart and wishlist buttons with custom icons.
+#### Dashboard Page: 
+Two tabs for managing Cart and Wishlist items.
+#### Cart and Wishlist Management: 
+Toast notifications for adding items to each.
+#### Sorting and Filtering: 
+Sort cart items by price and filter products by category.
+#### Dynamic Titles and Favicon: 
+Unique page titles and site icon for brand consistency.
 
-### Tech Stack
+## Tech Stack
 React for component-based UI.
 #### LocalStorage: 
 To retain cart and wishlist data across sessions.
@@ -27,7 +34,7 @@ Tailwind CSS and DaisyUI for modern, responsive styling.
 useLocation & useNavigate Hooks: For dynamic styling and modal navigation.
 LocalStorage for cart and wishlist is saved and loaded from LocalStorage..
 
-### Challenges
+## Challenges
 #### Cart and Wishlist Functionality: 
 Implementing robust add/remove logic for cart and wishlist items.
 #### LocalStorage Data Handling: 
@@ -41,7 +48,7 @@ Product Statistics: Displaying a visual representation of products based on thei
 Encountered critical issues with VS Code in the middle of the project, which required restarting the setup.
 
 
-### Miscellaneous
+## Miscellaneous
 #### 404 Page: 
 Custom error page.
 #### Modals & Notifications: 
