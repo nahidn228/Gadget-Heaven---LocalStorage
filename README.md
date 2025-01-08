@@ -1,9 +1,9 @@
 # GadgetHeaven ✨
 
-### 🌐 [Live Website](https://gadget-bd.surge.sh/)
-
+### 🌐 [Live Website](https://bd-gadget-haven.netlify.app/)
 
 ## 📋 Project Overview
+
 **GadgetHeaven** is a responsive e-commerce platform built with modern frontend technologies. It provides a seamless and engaging user experience for discovering, browsing, and purchasing the latest gadgets. The application features a structured navigation bar, dynamic product categories, individual product detail pages, and essential functionalities like a shopping cart, wishlist, and product filtering.
 
 ---
@@ -11,24 +11,24 @@
 ## 🚀 Features
 
 - **Structured Navigation**: A sleek navbar with routes for Home, Dashboard, and Stats.
-- **Home Page**: 
+- **Home Page**:
   - Features a dynamic banner, category sidebar, and gadget cards with at least 10 unique products.
   - Each category displays different items.
-- **Details Page**: 
+- **Details Page**:
   - Showcases detailed product information.
   - Includes "Add to Cart" and "Add to Wishlist" buttons with custom icons.
-- **Dashboard Page**: 
+- **Dashboard Page**:
   - Tabs for managing Cart and Wishlist items.
-- **Cart and Wishlist Management**: 
+- **Cart and Wishlist Management**:
   - Add/remove items with toast notifications.
-- **Sorting and Filtering**: 
+- **Sorting and Filtering**:
   - Sort cart items by price.
   - Filter products by category.
-- **Dynamic Titles and Favicon**: 
+- **Dynamic Titles and Favicon**:
   - Unique page titles and a favicon for brand consistency.
-- **404 Page**: 
+- **404 Page**:
   - Custom error page to handle invalid routes.
-- **Modals & Notifications**: 
+- **Modals & Notifications**:
   - Provide feedback for user actions like adding to cart or wishlist.
 
 ---
@@ -43,6 +43,7 @@
 - **Toast Notifications**: Feedback for user actions like adding/removing items.
 
 ---
+
 ## 📦 Dependencies
 
     "aos": "^2.3.4",
@@ -54,6 +55,7 @@
     "react-tabs": "^6.0.2",
     "react-toastify": "^10.0.6",
     "recharts": "^2.13.3"
+
 ---
 
 ## 📦 Dev Dependencies
@@ -98,7 +100,6 @@
 - **Dynamic Titles & Favicon**: Strengthens branding and improves user navigation.
 - **Responsive Design**: Ensures accessibility across devices.
 
-
 ---
 
 ## 🌟 Future Enhancements
@@ -110,6 +111,5 @@
 ---
 
 ### 📧 **Contact**
+
 For any queries or collaborations, reach out at **[nahidn228@gmail.com](mailto:nahidn228@gmail.com)**.
-
-
