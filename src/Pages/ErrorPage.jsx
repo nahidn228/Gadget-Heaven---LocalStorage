@@ -7,7 +7,7 @@ const ErrorPage = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Error - Gadget Heaven Accessories</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        
       </Helmet>
       <h1 className="text-9xl font-bold text-[#9538E2]">404</h1>
       <h2 className="text-3xl font-semibold mt-4">Page Not Found</h2>

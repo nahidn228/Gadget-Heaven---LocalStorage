@@ -14,9 +14,9 @@ const Navbar = () => {
       <NavLink
         to="/"
         className={({ isActive }) =>
-          `btn border-none hover:text-black ${
+          `btn border-none hover:bg-white hover:text-[#9538E2] ${
             isActive
-              ? "bg-white text-[#9538E2] border-2 border-[#9538E2]"
+              ? "bg-white text-[#9538E2] font-bold border-2 border-[#9538E2] shadow-lg"
               : "bg-[#9538E2] text-white"
           }`
         }
@@ -26,9 +26,9 @@ const Navbar = () => {
       <NavLink
         to="/statistics"
         className={({ isActive }) =>
-          `btn border-none hover:text-black ${
+          `btn border-none hover:bg-white hover:text-[#9538E2] ${
             isActive
-              ? "bg-white text-[#9538E2] border-2 border-[#9538E2]"
+              ? "bg-white text-[#9538E2] font-bold border-2 border-[#9538E2] shadow-lg"
               : "bg-[#9538E2] text-white"
           }`
         }
@@ -38,9 +38,9 @@ const Navbar = () => {
       <NavLink
         to="/dashboard"
         className={({ isActive }) =>
-          `btn border-none hover:text-black ${
+          `btn border-none hover:bg-white hover:text-[#9538E2] ${
             isActive
-              ? "bg-white text-[#9538E2] border-2 border-[#9538E2]"
+              ? "bg-white text-[#9538E2] font-bold border-2 border-[#9538E2] shadow-lg"
               : "bg-[#9538E2] text-white"
           }`
         }
@@ -50,9 +50,9 @@ const Navbar = () => {
       <NavLink
         to="/gadgets"
         className={({ isActive }) =>
-          `btn border-none hover:text-black ${
+          `btn border-none hover:bg-white hover:text-[#9538E2] ${
             isActive
-              ? "bg-white text-[#9538E2] border-2 border-[#9538E2]"
+              ? "bg-white text-[#9538E2] font-bold border-2 border-[#9538E2] shadow-lg"
               : "bg-[#9538E2] text-white"
           }`
         }
@@ -109,30 +109,7 @@ const Navbar = () => {
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal space-x-4 text-lg font-medium">
-              <NavLink
-                className="btn border-none text-white hover:text-black bg-[#9538E2]"
-                to="/"
-              >
-                Home
-              </NavLink>
-              <NavLink
-                className="btn border-none text-white hover:text-black bg-[#9538E2]"
-                to="/statistics"
-              >
-                Statistics
-              </NavLink>
-              <NavLink
-                className="btn border-none text-white bg-[#9538E2] hover:text-black"
-                to="/dashboard"
-              >
-                Dashboard
-              </NavLink>
-              <NavLink
-                className="btn  border-none text-white bg-[#9538E2] hover:text-black"
-                to="/gadgets"
-              >
-                Gadgets
-              </NavLink>
+              {navLinks}
             </ul>
           </div>
           <div className="navbar-end space-x-4">
